@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SmsBill.com.ua - Get Password v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-17 19:39+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: webmaster <webmaster@smsbill.com.ua>\n"
+"Language-Team: SmsBill.com.ua <webmaster@smsbill.com.ua>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UKRAINE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../smsbill_getpass.php:73
+#: ../smsbill_getpass.php:75
+msgid "SmsBill Services"
+msgstr ""
+
+#: ../smsbill_getpass.php:105
+msgid ""
+"<legend><h2>SmsBill services settings - \"Get Password\" or \"Time started\"</h2></legend>\n"
+"\t\t<p>To use this plug-in you need to <a href=\"http://partner.smsbill.com.ua/?m=registration\" target = \"_blank\"><b>register</b></a> in \"Sms Billing Ukraine\" system.</p>\n"
+"\t\t<p>You can get an additional info about <a href=\"http://smsbill.com.ua/sms-parol\" target = \"_blank\" >\"Get Password\"</a> service and <a href=\"http://smsbill.com.ua/sms-parol\" target = \"_blank\" >\"Time started\"</a></p>\n"
+"\t\t<p><b>Instruction</b><br>To hide text you should place it between two special tags like this: [smsbill_getpass] hidden text [/smsbill_getpass].</p>\n"
+"\t\t<p>Until user pays by sms for access he doesn't see your hidden text. He should select his country and operator to get text sms. After he get it he should send it by sms and get password in forwarded message. This password he should input into field.</p><p><p><hr /></p>"
+msgstr ""
+
+#: ../smsbill_getpass.php:112
+msgid "Enter service ID:"
+msgstr ""
+
+#: ../smsbill_getpass.php:117
+msgid "Enter charset for your site (default UTF-8):"
+msgstr ""
+
+#: ../smsbill_getpass.php:122
+msgid "If you want enter link to your css file (otherwise will be used css by default):"
+msgstr ""
+
+#: ../smsbill_getpass.php:127
+msgid "Save settings"
+msgstr ""
+
