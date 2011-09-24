@@ -56,9 +56,11 @@ This password he should input into field.
 
 == Changelog ==
 
+First upload
 
 == Upgrade Notice ==
 
+No upgrades yet
 
 == Arbitrary section ==
 
