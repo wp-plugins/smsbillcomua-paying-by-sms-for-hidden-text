@@ -2,8 +2,9 @@
 /*
 Plugin Name: SmsBill.com.ua Service
 Plugin URI: http://smsbill.com.ua/
-Description: (RUS) Данный плагин позволяет скрыть выбранный текст, пока пльзователь не оплатит право на просмотр с помощью SMS. Вместо текста обрамленного тегами [smsbill_pass] [/smsbill_pass] будет выведена платежная форма c инструкцией.
+Description: 
 (ENG) This plugin provides possibility to hide selected text untill user pay by SMS. Instead of text that inserted into tegs [smsbill_pass] [/smsbill_pass] there will be shown a pay form with instructions.
+(RUS) Данный плагин позволяет скрыть выбранный текст, пока пльзователь не оплатит право на просмотр с помощью SMS. Вместо текста обрамленного тегами [smsbill_pass] [/smsbill_pass] будет выведена платежная форма c инструкцией.
 Version: 1.0
 Author:  SMS Billing Ukrane / СМС Биллинг Украина
 Author URI: http://smsbill.com.ua
