@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: smsbill.com.ua 
 Donate link: http://smsbill.com.ua
-Tags: sms-key, selling by sms, hidden text, sms gateway, sms billing
+Tags: 1.0
 Requires at least: 3.1.1
 Tested up to: 3.1.1
 Stable tag: 1.0
@@ -18,16 +18,16 @@ Until user pays by sms for access he doesn't see your hidden text. He should sel
 After that he gets a text for sms snd short number. He should send it by sms to the short number and get password in forwarded message. 
 This password he should input into field.
 
-Для использования плагина, необходима регистрация в системе биллинга "СМС Биллинг Украина" http://smsbill.com.ua.
-Вы можете узнать дополнительную информациию об услуге "Получи пароль" по ссылке http://smsbill.com.ua/sms-parol и услуге "Время пошло" http://smsbill.com.ua/sms-parol-vremya-poshlo. 
-Чтобы скрыть оперделенный текст на странице сайта, его необходимо поместить между двумя специальными тегами, вот так: 
-[smsbill_getpass] текст, который будет скрыт [/smsbill_getpass].
-Вместо скрытого текста, на сайте будет показана инструкция о смс-платеже. Пользователь должен будет отправить смс на короткий номер и получить в ответном смс пароль доступа. 
-После ввода полученного пароля в предназаначенное для него поле, пользователю будет показана страница со скрытм до этого текстом.
+Р”Р»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїР»Р°РіРёРЅР°, РЅРµРѕР±С…РѕРґРёРјР° СЂРµРіРёСЃС‚СЂР°С†РёСЏ РІ СЃРёСЃС‚РµРјРµ Р±РёР»Р»РёРЅРіР° "РЎРњРЎ Р‘РёР»Р»РёРЅРі РЈРєСЂР°РёРЅР°" http://smsbill.com.ua.
+Р’С‹ РјРѕР¶РµС‚Рµ СѓР·РЅР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёРёСЋ РѕР± СѓСЃР»СѓРіРµ "РџРѕР»СѓС‡Рё РїР°СЂРѕР»СЊ" РїРѕ СЃСЃС‹Р»РєРµ http://smsbill.com.ua/sms-parol Рё СѓСЃР»СѓРіРµ "Р’СЂРµРјСЏ РїРѕС€Р»Рѕ" http://smsbill.com.ua/sms-parol-vremya-poshlo. 
+Р§С‚РѕР±С‹ СЃРєСЂС‹С‚СЊ РѕРїРµСЂРґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ РЅР° СЃС‚СЂР°РЅРёС†Рµ СЃР°Р№С‚Р°, РµРіРѕ РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕРјРµСЃС‚РёС‚СЊ РјРµР¶РґСѓ РґРІСѓРјСЏ СЃРїРµС†РёР°Р»СЊРЅС‹РјРё С‚РµРіР°РјРё, РІРѕС‚ С‚Р°Рє: 
+[smsbill_getpass] С‚РµРєСЃС‚, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ СЃРєСЂС‹С‚ [/smsbill_getpass].
+Р’РјРµСЃС‚Рѕ СЃРєСЂС‹С‚РѕРіРѕ С‚РµРєСЃС‚Р°, РЅР° СЃР°Р№С‚Рµ Р±СѓРґРµС‚ РїРѕРєР°Р·Р°РЅР° РёРЅСЃС‚СЂСѓРєС†РёСЏ Рѕ СЃРјСЃ-РїР»Р°С‚РµР¶Рµ. РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РґРѕР»Р¶РµРЅ Р±СѓРґРµС‚ РѕС‚РїСЂР°РІРёС‚СЊ СЃРјСЃ РЅР° РєРѕСЂРѕС‚РєРёР№ РЅРѕРјРµСЂ Рё РїРѕР»СѓС‡РёС‚СЊ РІ РѕС‚РІРµС‚РЅРѕРј СЃРјСЃ РїР°СЂРѕР»СЊ РґРѕСЃС‚СѓРїР°. 
+РџРѕСЃР»Рµ РІРІРѕРґР° РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ РїР°СЂРѕР»СЏ РІ РїСЂРµРґРЅР°Р·Р°РЅР°С‡РµРЅРЅРѕРµ РґР»СЏ РЅРµРіРѕ РїРѕР»Рµ, РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ Р±СѓРґРµС‚ РїРѕРєР°Р·Р°РЅР° СЃС‚СЂР°РЅРёС†Р° СЃРѕ СЃРєСЂС‹С‚Рј РґРѕ СЌС‚РѕРіРѕ С‚РµРєСЃС‚РѕРј.
 
 == Installation ==
 
-1. Upload folder of the plugin to the `/wp-content/plugins/` directory
+1. Upload folder of the plugin to the `/wp-content/plugins/smsbill_getpass` directory
 2. Activate the plugin "SmsBill.com.ua Service" through the 'Plugins' menu in WordPress
 3. In `Settings` find "SmsBill Service". Here you should identify the following:
 - ID service thet you create in the sms-billing;
@@ -35,13 +35,13 @@ This password he should input into field.
 - optional you can define link to your css file if needed.
 
 
-1. Скопируйте папку плагина в /wp-content/plugins/ на хостинге.
-2. Залогинтесь в админ панель сайта. Зайдите в раздел "Плагины" и активируйте плагин "SmsBill.com.ua Service"
-3. В разеделе "Параметры" найдите "SmsBill Сервис" и зайдите внутрь. Здесь необходимо узаказь:
-- ID услуги, поключенной в смс-биллинге;
-- кодировку сайта;
-- опционально можно указать путь к своему CSS файлу.
-Нажмите кнопку "Сохранить".
+1. РЎРєРѕРїРёСЂСѓР№С‚Рµ РїР°РїРєСѓ РїР»Р°РіРёРЅР° РІ /wp-content/plugins/smsbill_getpass РЅР° С…РѕСЃС‚РёРЅРіРµ.
+2. Р—Р°Р»РѕРіРёРЅС‚РµСЃСЊ РІ Р°РґРјРёРЅ РїР°РЅРµР»СЊ СЃР°Р№С‚Р°. Р—Р°Р№РґРёС‚Рµ РІ СЂР°Р·РґРµР» "РџР»Р°РіРёРЅС‹" Рё Р°РєС‚РёРІРёСЂСѓР№С‚Рµ РїР»Р°РіРёРЅ "SmsBill.com.ua Service"
+3. Р’ СЂР°Р·РµРґРµР»Рµ "РџР°СЂР°РјРµС‚СЂС‹" РЅР°Р№РґРёС‚Рµ "SmsBill РЎРµСЂРІРёСЃ" Рё Р·Р°Р№РґРёС‚Рµ РІРЅСѓС‚СЂСЊ. Р—РґРµСЃСЊ РЅРµРѕР±С…РѕРґРёРјРѕ СѓР·Р°РєР°Р·СЊ:
+- ID СѓСЃР»СѓРіРё, РїРѕРєР»СЋС‡РµРЅРЅРѕР№ РІ СЃРјСЃ-Р±РёР»Р»РёРЅРіРµ;
+- РєРѕРґРёСЂРѕРІРєСѓ СЃР°Р№С‚Р°;
+- РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ РјРѕР¶РЅРѕ СѓРєР°Р·Р°С‚СЊ РїСѓС‚СЊ Рє СЃРІРѕРµРјСѓ CSS С„Р°Р№Р»Сѓ.
+РќР°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ "РЎРѕС…СЂР°РЅРёС‚СЊ".
 
 == Frequently Asked Questions ==
 
@@ -51,12 +51,12 @@ This password he should input into field.
 
 == Screenshots ==
 
-1. This is setting screenshot-1.jpg
-2. This is paying form screenshot-2.jpg
+1. This is a settings page screenshot-1.jpg
+2. This is a paying form screenshot-2.jpg
 
 == Changelog ==
 
-First upload
+No changes yet
 
 == Upgrade Notice ==
 
