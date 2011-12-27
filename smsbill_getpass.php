@@ -116,7 +116,7 @@ if (!class_exists('smsbill_getpass')) {
 			<?php echo __('If you want enter link to your css file (otherwise will be used css by default):', 'smsbill_getpass');?>
 			</p>
 			<p>
-			<input type="text" id="link_to_css" name="char_set" size="20" style="font-family: 'Courier New', monospace; font-size: 1.5em;" <?php echo ($this->link_to_css == "" ? 'http://smsbill.com.ua/form/serviceform/getpassword/popup_v2.css' : ' value="'.stripslashes($this->link_to_css).'" ')?>  />
+			<input type="text" id="link_to_css" name="link_to_css" size="50" style="font-family: 'Courier New', monospace; font-size: 1.5em;" <?php echo ($this->link_to_css == "" ? 'value="http://smsbill.com.ua/form/serviceform/getpassword/popup_v2.css"' : ' value="'.stripslashes($this->link_to_css).'" ')?>  />
 			<p class="submit">
 			<input type="submit" name="submit" value="<?php echo __('Save settings', 'smsbill_getpass');?>" />
 			</p>
