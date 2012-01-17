@@ -2,9 +2,8 @@
 /*
 Plugin Name: SmsBill.com.ua Service
 Plugin URI: http://smsbill.com.ua/
-Description: 
-(ENG) This plugin provides possibility to hide selected text untill user pay by SMS. Instead of text that inserted into tegs [smsbill_pass] [/smsbill_pass] there will be shown a pay form with instructions.
-(RUS) Данный плагин позволяет скрыть выбранный текст, пока пльзователь не оплатит право на просмотр с помощью SMS. Вместо текста обрамленного тегами [smsbill_pass] [/smsbill_pass] будет выведена платежная форма c инструкцией.
+Description: (RUS) Данный плагин позволяет скрыть выбранный текст, пока пльзователь не оплатит право на просмотр с помощью SMS. Вместо текста обрамленного тегами [smsbill_pass] [/smsbill_pass] будет выведена платежная форма c инструкцией.
+(ENG) This plugin provides possibility to hide selected text untill user pay by SMS. Instead of text there will be shown a pay form with instructions.
 Version: 1.0
 Author:  SMS Billing Ukrane / СМС Биллинг Украина
 Author URI: http://smsbill.com.ua
@@ -37,8 +36,8 @@ if (!class_exists('smsbill_getpass')) {
 		add_filter('the_content', array(&$this,'hidden_content'));
 	}
 		
-	function hidden_content() {
-		$content = get_the_content();
+	function hidden_content($content) {
+		//$content = get_the_content();
 		if (preg_match('/\\['.$this->tag_start.'\\](.*?)\\[\\/'.$this->tag_end.'\\]/is', $content, $result)) {			
 			//начало скрипта услуги 
 			$smsbill = new SMSBill();
@@ -48,23 +47,19 @@ if (!class_exists('smsbill_getpass')) {
 			$smsbill->useCss($this->link_to_css);
 			if (isset($_REQUEST['smsbill_password'])) {
 				if (!$smsbill->checkPassword($_REQUEST['smsbill_password'])) { 
-					$response = $smsbill->checkPassword($_REQUEST['smsbill_password']);
+					//пароль не верный 
 					$hidden = '<br><b style="color:red">This is a wrong password. Please, come back and try once more.</b></br>';
-					$show = preg_replace('/\\['.$this->tag_start.'\\].*?\\[\\/'.$this->tag_end.'\\]/i', $hidden, $content);
-					return $show;
 					} else { 
 						//пароль верный
-						$hidden_text= $result[1];
-						$show = preg_replace('/\\['.$this->tag_start.'\\].*?\\[\\/'.$this->tag_end.'\\]/i', $hidden_text, $content);
-						return $show;
+						$hidden = $result[1];
 					}
 			} else {
 				//показать форму т.к. пароль не введен
-				$form = $smsbill->getForm();
-				$show = preg_replace('/\\['.$this->tag_start.'\\].*?\\[\\/'.$this->tag_end.'\\]/i', $form, $content);
-				return $show;
+				$hidden = $smsbill->getForm();
 			}
+		$content = preg_replace('/\\['.$this->tag_start.'\\].*?\\[\\/'.$this->tag_end.'\\]/is', $hidden, $content);
 		}
+		return $content;
 	}
 
 
@@ -85,11 +80,8 @@ if (!class_exists('smsbill_getpass')) {
 			$service =  intval($_POST['service_id']);
 			$css = $_POST['link_to_css'];
 			check_admin_referer();
-//				if (($service) === "") {
-//					$mess = __('<h3> Wrong ID service </h3>', 'smsbill_getpass');
-//				}
 				if (($css) === "") {
-					update_option($this->options.'_link_to_css', 'http://smsbill.com.ua/form/serviceform/getpassword/popup_v2.css');
+					update_option($this->options.'_link_to_css', 'http://form.smsbill.com.ua//serviceform/getpassword/popup_v2.css');
 				}
 				if (($char) === "") {
 					update_option($this->options.'_char_set', 'utf-8');
@@ -107,7 +99,7 @@ if (!class_exists('smsbill_getpass')) {
 		<?php echo __('<legend><h2>SmsBill services settings - "Get Password" or "Time started"</h2></legend>
 		<p>To use this plug-in you need to <a href="http://partner.smsbill.com.ua/?m=registration" target = "_blank"><b>register</b></a> in "Sms Billing Ukraine" system.</p>
 		<p>You can get an additional info about <a href="http://smsbill.com.ua/sms-parol" target = "_blank" >"Get Password"</a> service and <a href="http://smsbill.com.ua/sms-parol" target = "_blank" >"Time started"</a></p>
-		<p><b>Instruction</b><br>To hide text you should place it between two special tags like this: [smsbill_getpass] hidden text [/smsbill_getpass].</p>
+		<p><b>Instruction</b><br>To hide text you should place it between two special tags like this: [smsbill_pass] hidden text [/smsbill_pass].</p>
 		<p>Until user pays by sms for access he doesn\'t see your hidden text. He should select his country and operator to get text sms. After he get it he should send it by sms and get password in forwarded message. This password he should input into field.</p><p><p><hr /></p>', 'smsbill_getpass');?>
 			<form method="post" id="<?php echo $this->options; ?>-conf" style="text-align: left ; margin: left; width: 50em;">
 			<p>
@@ -124,7 +116,7 @@ if (!class_exists('smsbill_getpass')) {
 			<?php echo __('If you want enter link to your css file (otherwise will be used css by default):', 'smsbill_getpass');?>
 			</p>
 			<p>
-			<input type="text" id="link_to_css" name="char_set" size="20" style="font-family: 'Courier New', monospace; font-size: 1.5em;" <?php echo ($this->link_to_css == "" ? 'http://smsbill.com.ua/form/serviceform/getpassword/popup_v2.css' : ' value="'.stripslashes($this->link_to_css).'" ')?>  />
+			<input type="text" id="link_to_css" name="link_to_css" size="50" style="font-family: 'Courier New', monospace; font-size: 1.5em;" <?php echo ($this->link_to_css == "" ? 'value="http://form.smsbill.com.ua//serviceform/getpassword/popup_v2.css"' : ' value="'.stripslashes($this->link_to_css).'" ')?>  />
 			<p class="submit">
 			<input type="submit" name="submit" value="<?php echo __('Save settings', 'smsbill_getpass');?>" />
 			</p>
@@ -141,6 +133,7 @@ if (!class_exists('smsbill_getpass')) {
 if (class_exists('smsbill_getpass')) {
 $smsbill_getpass = new smsbill_getpass();
 }
+
 
 
 ?>
